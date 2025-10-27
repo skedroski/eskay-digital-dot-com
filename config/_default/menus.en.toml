@@ -1,25 +1,7 @@
 ############# English navigation ##############
 
 # main menu
-[[main]]
-name = "Home"
-url = "/#home"
-weight = 1
-
-[[main]]
-name = "About"
-url = "/#about"
-weight = 2
-
-[[main]]
-name = "Services"
-url = "/#services"
-weight = 3
-
-[[main]]
-name = "Contact"
-url = "/#contact"
-weight = 4
+# No main menu items - logo left, Let's Talk button right
 
 
 # footer menu
