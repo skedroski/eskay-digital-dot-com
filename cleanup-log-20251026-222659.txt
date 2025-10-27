@@ -1,0 +1,25 @@
+=== Hugo Bloat Cleanup Log ===
+Started: Sun Oct 26 22:26:59 CDT 2025
+
+ℹ Calculating current project size...
+ℹ Current project size:  44M
+ℹ Creating backup archive...
+✓ Backup created: eskay-backup-20251026-222659.tar.gz ( 17M)
+Backup location: /Users/stevekedroski/Desktop/projects/eskay-backup-20251026-222659.tar.gz
+⚠ exampleSite directory not found (may have been removed already)
+⚠ Gallery directory not found
+⚠ No duplicate logo files found
+⚠ No demo images found
+⚠ Maps plugin not found
+⚠ No blog directories found
+ℹ Initial size:  44M
+ℹ Final size:    44M
+✓ Backup saved: /Users/stevekedroski/Desktop/projects/eskay-backup-20251026-222659.tar.gz
+
+=== Summary ===
+Initial size:  44M
+Final size:  44M
+Completed: Sun Oct 26 22:27:00 CDT 2025
+ℹ Checking critical files still exist...
+✓ All critical files intact!
+✓ Log saved to: /Users/stevekedroski/Desktop/projects/eskay-digital-dot-com/cleanup-log-20251026-222659.txt

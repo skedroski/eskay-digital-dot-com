@@ -1,2 +1,352 @@
-/* DO NOT WRITE ANY STYLE IN THIS FILE */
-/* If you want to add your own styles, please write it in the `./assets/css/custom.css` file. */
+/* Add your own custom styles here */
+
+/* Larger logo in header and footer */
+.navbar-brand img,
+.navbar-brand svg {
+  height: 120px !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: -20px 0 !important;
+  padding: 0 !important;
+}
+
+.footer-logo img,
+.footer-logo svg {
+  height: 100px !important;
+  width: auto !important;
+  margin: -15px 0 !important;
+  padding: 0 !important;
+}
+
+/* Hero Section - Near-black background with subtle grain */
+.banner {
+  background-color: #0a0a0a !important;
+  position: relative;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.banner > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* CTA Button Styles */
+.btn-primary {
+  background-color: #006826 !important;
+  border-color: #006826 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #008c33 !important;
+  border-color: #008c33 !important;
+  transform: translateY(-1px);
+}
+
+/* Remove images from about/features sections and hide banner image element */
+.features img,
+.features picture,
+.about img,
+.about picture,
+section img[alt="Banner image"],
+section img[alt="feature image"],
+section picture:has(img[alt="Banner image"]),
+section picture:has(img[alt="feature image"]) {
+  display: none !important;
+}
+
+/* Hide the parent column div if it only contains banner/feature images */
+.col-12:has(img[alt="Banner image"]),
+.md\:col-5:has(img[alt="feature image"]) {
+  display: none !important;
+}
+
+/* First feature section - match width of three-column section and center-align */
+.section-sm:first-of-type {
+  max-width: 100% !important;
+  position: relative !important;
+  background: linear-gradient(
+    135deg,
+    #003d17 0%,
+    #006826 25%,
+    #004d1e 50%,
+    #002d12 100%
+  ) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+}
+
+/* Add organic noise texture overlay */
+.section-sm:first-of-type::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E") !important;
+  opacity: 0.15 !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+/* Add radial gradient accent for depth */
+.section-sm:first-of-type::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -50% !important;
+  right: -10% !important;
+  width: 60% !important;
+  height: 200% !important;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 140, 51, 0.3) 0%,
+    transparent 60%
+  ) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  mix-blend-mode: soft-light !important;
+}
+
+.section-sm:first-of-type .container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.section-sm:first-of-type .row {
+  justify-content: center !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.section-sm:first-of-type .col-12 {
+  max-width: 100% !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+/* Center align headings and paragraphs in first feature section */
+.section-sm:first-of-type h2,
+.section-sm:first-of-type p,
+.section-sm:first-of-type ul {
+  text-align: center !important;
+}
+
+/* Center align bullet points in first feature section */
+.section-sm:first-of-type ul {
+  list-style: none !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.section-sm:first-of-type ul li {
+  text-align: center !important;
+  padding-left: 0 !important;
+}
+
+/* Hide the checkmark icon since it doesn't work well with center alignment */
+.section-sm:first-of-type ul li i {
+  display: none !important;
+}
+
+/* Section Divider */
+.section-divider {
+  padding: 3rem 0;
+  background-color: transparent;
+}
+
+.divider-line {
+  border: none !important;
+  height: 2px !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  background: linear-gradient(to right, transparent, #006826 50%, transparent) !important;
+}
+
+/* Three-column features section */
+.three-column-features {
+  background-color: transparent !important;
+}
+
+.three-column-features .container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.three-column-features .row {
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 2rem !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+.three-column-features .md\:col-4 {
+  text-align: center !important;
+  flex: 1 !important;
+}
+
+.three-column-features .feature-icon {
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 1.5rem auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.three-column-features .feature-icon img {
+  display: block !important;
+  max-width: 80px !important;
+  max-height: 80px !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.three-column-features h2 {
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.three-column-features p {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Banner section background image - full width behind all content */
+.section.pt-14 {
+  background-image: url("/images/banner-1.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  position: relative !important;
+  z-index: 0 !important;
+  min-height: 600px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Center align the container content */
+.section.pt-14 .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Ensure background image shows behind grain texture */
+.section.pt-14::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-image: url("/images/banner-1.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  z-index: -1 !important;
+}
+
+/* Ensure text is readable over the background image */
+.section.pt-14 .container,
+.section.pt-14 .row,
+.section.pt-14 h1,
+.section.pt-14 p,
+.section.pt-14 .btn {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/* Clean, minimal design - no unnecessary flourishes */
+* {
+  transition-duration: 0.2s !important;
+}
+
+/* Ensure headlines are white */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: #ffffff !important;
+}
+
+/* Body text color */
+p,
+li,
+span,
+div {
+  color: #a0a0a0;
+}
+
+/* Override any light backgrounds - apply grain texture globally */
+body {
+  background-color: #0a0a0a !important;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 1;
+}
+
+body > * {
+  position: relative;
+  z-index: 2;
+}
+
+.section,
+.container {
+  background-color: transparent !important;
+}
+
+/* Remove solid backgrounds from content boxes */
+.bg-light,
+.dark\:bg-darkmode-light,
+.bg-gradient,
+.section-sm.bg-gradient {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Ensure row containers are transparent */
+.row {
+  background: transparent !important;
+}

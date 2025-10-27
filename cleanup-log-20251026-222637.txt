@@ -1,0 +1,66 @@
+=== Hugo Bloat Cleanup Log ===
+Started: Sun Oct 26 22:26:37 CDT 2025
+
+ℹ Calculating current project size...
+ℹ Current project size:  47M
+ℹ Creating backup archive...
+✓ Backup created: eskay-backup-20251026-222637.tar.gz ( 20M)
+Backup location: /Users/stevekedroski/Desktop/projects/eskay-backup-20251026-222637.tar.gz
+ℹ exampleSite size: 1.8M
+✓ Removed exampleSite/ (1.8M saved)
+ℹ Gallery size: 1.3M
+Removing gallery images:
+total 2760
+-rw-r--r--@ 1 stevekedroski  staff    74K Sep 29 21:32 01.jpg
+-rw-r--r--@ 1 stevekedroski  staff   697K Sep 29 21:32 02.jpg
+-rw-r--r--@ 1 stevekedroski  staff   253K Sep 29 21:32 03.jpg
+-rw-r--r--@ 1 stevekedroski  staff    58K Sep 29 21:32 04.jpg
+-rw-r--r--@ 1 stevekedroski  staff   210K Sep 29 21:32 05.jpg
+-rw-r--r--@ 1 stevekedroski  staff    74K Sep 29 21:32 06.jpg
+✓ Removed gallery/ (1.3M saved)
+✓ Removed logo.jpg (228K)
+✓ Removed logo-darkmode.jpg (252K)
+✓ Removed 2 duplicate logo file(s)
+✓ Removed avatar.png (4.0K)
+✓ Removed avatar-sm.png (4.0K)
+✓ Removed banner.png ( 80K)
+✓ Removed call-to-action.png ( 20K)
+✓ Removed image-placeholder.png (8.0K)
+✓ Removed no-search-found.png ( 12K)
+✓ Removed 6 demo image(s)
+✓ Removed Google Maps plugin (4.0K)
+Removing: content/english/blog
+content/english/blog/post-4.md
+content/english/blog/post-1.md
+content/english/blog/post-2.md
+content/english/blog/post-3.md
+content/english/blog/_index.md
+✓ Removed blog/ ( 20K)
+Removing: content/english/authors
+content/english/authors/william-jacob.md
+content/english/authors/john-doe.md
+content/english/authors/sam-wilson.md
+content/english/authors/_index.md
+✓ Removed authors/ ( 16K)
+Removing: content/english/about
+content/english/about/_index.md
+✓ Removed about/ (4.0K)
+Removing: content/english/contact
+content/english/contact/_index.md
+✓ Removed contact/ (4.0K)
+Removing: content/english/pages
+content/english/pages/privacy-policy.md
+content/english/pages/elements.md
+✓ Removed pages/ ( 12K)
+✓ Removed 5 blog/content directory(ies)
+ℹ Initial size:  47M
+ℹ Final size:    44M
+✓ Backup saved: /Users/stevekedroski/Desktop/projects/eskay-backup-20251026-222637.tar.gz
+
+=== Summary ===
+Initial size:  47M
+Final size:  44M
+Completed: Sun Oct 26 22:26:39 CDT 2025
+ℹ Checking critical files still exist...
+✓ All critical files intact!
+✓ Log saved to: /Users/stevekedroski/Desktop/projects/eskay-digital-dot-com/cleanup-log-20251026-222637.txt

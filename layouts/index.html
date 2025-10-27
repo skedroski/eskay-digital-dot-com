@@ -36,45 +36,74 @@
 
   <!-- Features -->
   {{ range $i, $e:= .Params.features }}
-    <section class="section-sm {{ if (modBool $i 2) }}bg-gradient{{ end }}">
-      <div class="container">
-        <div class="row items-center justify-between">
-          <div
-            class="mb:md-0 {{ if not (modBool $i 2) }}
-              md:order-2
-            {{ end }} md:col-5 mb-6">
-            {{ partial "image" (dict "Src" .image "Alt" "feature image" "DisplayXL" "520x" "DisplayLG" "425x" "DisplayMD" "360x") }}
-          </div>
-          <div
-            class="{{ if not (modBool $i 2) }}
-              md:order-1
-            {{ end }} md:col-7 lg:col-6">
-            <h2 class="mb-4">
-              {{ .title | markdownify }}
-            </h2>
-            <p class="mb-8 text-lg">
-              {{ .content | markdownify }}
-            </p>
-            <ul>
-              {{ range .bulletpoints }}
-                <li class="relative mb-4 pl-6">
-                  <i class="fa fa-check absolute left-0 top-1.5"></i>
-                  {{ . | markdownify }}
-                </li>
+    {{ if eq $i 0 }}
+      <!-- First feature: full width section -->
+      <section class="section-sm">
+        <div class="container">
+          <div class="row justify-center">
+            <div class="col-12">
+              <h2 class="mb-4">
+                {{ .title | markdownify }}
+              </h2>
+              <p class="mb-8 text-lg">
+                {{ .content | markdownify }}
+              </p>
+              <ul>
+                {{ range .bulletpoints }}
+                  <li class="relative mb-4 pl-6">
+                    <i class="fa fa-check absolute left-0 top-1.5"></i>
+                    {{ . | markdownify }}
+                  </li>
+                {{ end }}
+              </ul>
+              {{ with .button }}
+                {{ if .enable }}
+                  <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
+                    {{ .label }}
+                    <i class="fa fa-arrow-right pl-2"></i>
+                  </a>
+                {{ end }}
               {{ end }}
-            </ul>
-            {{ with .button }}
-              {{ if .enable }}
-                <a class="btn btn-primary mt-6" href="{{ .link | absURL }}">
-                  {{ .label }}
-                  <i class="fa fa-arrow-right pl-2"></i>
-                </a>
-              {{ end }}
-            {{ end }}
+            </div>
           </div>
         </div>
+      </section>
+    {{ else if eq $i 1 }}
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <div class="container">
+          <hr class="divider-line">
+        </div>
       </div>
-    </section>
+      <!-- Three-column section starts here -->
+      <section class="section-sm three-column-features">
+        <div class="container">
+          <div class="row justify-center">
+    {{ end }}
+
+    {{ if ge $i 1 }}
+      <!-- Column for Purchase, Cognitive Workforce, Data -->
+      <div class="md:col-4 col-12 mb-8 md:mb-0">
+        {{ if .icon }}
+          <div class="feature-icon mb-6">
+            {{ partial "image" (dict "Src" .icon "Alt" (printf "%s icon" .title) "Class" "mx-auto") }}
+          </div>
+        {{ end }}
+        <h2 class="mb-4">
+          {{ .title | markdownify }}
+        </h2>
+        <p class="text-lg">
+          {{ .content | markdownify }}
+        </p>
+      </div>
+    {{ end }}
+
+    {{ if eq $i 3 }}
+      <!-- Close three-column section -->
+          </div>
+        </div>
+      </section>
+    {{ end }}
   {{ end }}
   <!-- /Features -->
 
