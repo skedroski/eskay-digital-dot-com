@@ -5,22 +5,4 @@
 
 
 # footer menu
-[[footer]]
-name = "Home"
-url = "/#home"
-weight = 1
-
-[[footer]]
-name = "About"
-url = "/#about"
-weight = 2
-
-[[footer]]
-name = "Services"
-url = "/#services"
-weight = 3
-
-[[footer]]
-name = "Contact"
-url = "/#contact"
-weight = 4
+# No footer menu items
