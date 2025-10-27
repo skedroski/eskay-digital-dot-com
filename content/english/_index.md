@@ -15,7 +15,7 @@ features:
     image: ""
     content: "Eskay Digital partners with enterprise leaders in complex B2B environments to deliver agentic AI systems that actually work. With deep experience leading large-scale initiatives, we understand what it takes to align teams, platforms, and politics inside real organizations. We don't just advise. We lead complex programs, align stakeholders, and ship what matters."
     bulletpoints:
-      - "If your program fails, you're the one answering for it. That's why we focus on what's real, what's worth it — and what will get you promoted, not fired."
+      - "If your program fails, you're the one answering for it. That's why we focus on what's real, what's worth it — and what to avoid."
     button:
       enable: false
       label: ""
