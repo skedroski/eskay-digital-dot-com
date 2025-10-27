@@ -39,7 +39,7 @@ preloader = "" # use jpg, png, svg or gif format.
 [navigation_button]
 enable = true
 label = "Let's Talk"
-link = "#contact"
+link = "https://www.linkedin.com/in/steve-kedroski-60a54589/"
 
 # search
 # search module: https://github.com/gethugothemes/hugo-modules/tree/master/search

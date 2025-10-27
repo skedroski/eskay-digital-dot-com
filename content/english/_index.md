@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Let's Talk"
-    link: "#contact"
+    link: "https://www.linkedin.com/in/steve-kedroski-60a54589/"
 
 # Features
 features:
