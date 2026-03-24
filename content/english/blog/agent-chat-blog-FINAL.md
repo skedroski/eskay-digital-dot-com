@@ -8,8 +8,6 @@ tags: ["agentic", "enterprise"]
 draft: false
 ---
 
-# Why Internal Agentforce Shouldn't Be Chat-Based
-
 Most of Agentforce's GTM has been focused on customer-facing applications. Most of those use cases have also been chat-based — meaning the core channel of communication between man and machine is an embedded chat UI within a company's website or app.
 It makes sense. It's how people are familiar with using AI. It's the lowest friction entry point for:
 
