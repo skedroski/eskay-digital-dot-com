@@ -1,7 +1,7 @@
 ---
 title: "Why Internal Agentforce Shouldn't Be Chat-Based"
 date: 2026-03-24
-description: "A short description for the card preview"
+description: "Chat is a great interface for thinking. Salesforce isn't where reps go to think. Why internal Agentforce should be event-driven, not chat-based"
 image: "images/blog/my-first-post.jpg"  # optional
 categories: ["AI"]
 tags: ["agentic", "enterprise"]
