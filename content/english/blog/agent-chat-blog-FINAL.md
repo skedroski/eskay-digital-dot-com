@@ -17,13 +17,13 @@ It makes sense. It's how people are familiar with using AI. It's the lowest fric
 This isn't the same for Agentforce as a tool for internal use cases.
 
 ## Why Not Internal
-### The UI just doesn't work.
+###### The UI just doesn't work.
 
 When I walk into a dark room, I want the light to turn on. I do not want to take out my phone and type a command to my AI to make that happen. When a rep opens a Salesforce record, their mental model is task-oriented. They're on that page to do something specific. A chat window in that context is an interruption pattern inside a UI that wasn't designed for it.
 
 A rep shouldn't have to know what to ask. They shouldn't have to remember that Agentforce exists and might know something useful. The agent should know when it has something worth saying and surface it contextually.
 
-### The chat paradigm puts the cognitive burden on the rep. The right paradigm puts it on the system.
+###### The chat paradigm puts the cognitive burden on the rep. The right paradigm puts it on the system.
 
 When a rep is inside Salesforce, they aren't there to "create", "imagine", or "think". A rep is there to perform specific tasks — updating a contract with additional products and terms, for example — or to get critical information in support of more cognitively complex work happening outside Salesforce, like pulling data for a PowerPoint deck. Most Salesforce users aren't expecting to do a lot of typing inside the platform. When we throw chat into the mix, it forces the user to stop and think: "what are you supposed to help me do again?" That's not right. The right pattern is ambient, contextual, and event-driven.
 
