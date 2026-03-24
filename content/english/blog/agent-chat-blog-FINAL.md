@@ -1,5 +1,5 @@
 ---
-title: "My First Post"
+title: "Why Internal Agentforce Shouldn't Be Chat-Based"
 date: 2026-03-24
 description: "A short description for the card preview"
 image: "images/blog/my-first-post.jpg"  # optional
