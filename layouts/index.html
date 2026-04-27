@@ -1,7 +1,7 @@
 {{ define "main" }}
   <!-- Banner -->
   {{ with .Params.banner }}
-    <section class="section pt-14">
+    <section class="pt-14 pb-8">
       <div class="container">
         <div class="row justify-center">
           <div class="lg:col-7 md:col-9 mb-8 text-center">
@@ -38,7 +38,7 @@
   {{ range $i, $e:= .Params.features }}
     {{ if eq $i 0 }}
       <!-- First feature: full width section -->
-      <section class="section-sm">
+      <section class="py-8">
         <div class="container">
           <div class="row justify-center">
             <div class="col-12">
@@ -68,49 +68,74 @@
           </div>
         </div>
       </section>
-    {{ else if eq $i 1 }}
+    {{ end }}
+  {{ end }}
+  <!-- /Features -->
+
+  <!-- Salesforce Partner Section -->
+  {{ with site.GetPage "sections/salesforce-partner" }}
+    {{ if .Params.enable }}
       <!-- Section Divider -->
       <div class="section-divider">
         <div class="container">
           <hr class="divider-line">
         </div>
       </div>
-      <!-- Three-column section starts here -->
-      <section class="section-sm three-column-features">
+      <section class="py-8">
         <div class="container">
-          <div class="row justify-center">
-    {{ end }}
+          <!-- Partner Badge -->
+          {{ with .Params.partner_badge }}
+            <div class="row justify-center mb-8">
+              <div class="lg:col-6 md:col-8 col-12 text-center">
+                {{ partial "image" (dict "Src" .image "Alt" .alt "Class" "mx-auto") }}
+              </div>
+            </div>
+          {{ end }}
 
-    {{ if ge $i 1 }}
-      <!-- Column for Purchase, Cognitive Workforce, Data -->
-      <div class="md:col-4 col-12 mb-8 md:mb-0">
-        {{ if .icon }}
-          <div class="feature-icon mb-6">
-            {{ partial "image" (dict "Src" .icon "Alt" (printf "%s icon" .title) "Class" "mx-auto") }}
+          <!-- Section Header -->
+          <div class="row justify-center mb-8">
+            <div class="md:col-10 lg:col-8 text-center">
+              <h2 class="mb-4">
+                {{ .Title | markdownify }}
+              </h2>
+              <p class="text-lg">
+                {{ .Params.description | markdownify }}
+              </p>
+            </div>
           </div>
-        {{ end }}
-        <h2 class="mb-4">
-          {{ .title | markdownify }}
-        </h2>
-        <p class="text-lg">
-          {{ .content | markdownify }}
-        </p>
-      </div>
-    {{ end }}
 
-    {{ if eq $i 3 }}
-      <!-- Close three-column section -->
+          <!-- Competencies Grid -->
+          <div class="row justify-center">
+            <div class="md:col-10 lg:col-8 col-12">
+              <div class="row">
+                {{ range .Params.competencies }}
+                  <div class="lg:col-4 md:col-4 col-12 mb-8">
+                    {{ if .icon }}
+                      <div class="feature-icon mb-6">
+                        {{ partial "image" (dict "Src" .icon "Alt" (printf "%s icon" .title) "Class" "mx-auto") }}
+                      </div>
+                    {{ end }}
+                    <h3 class="mb-4 h5">
+                      {{ .title | markdownify }}
+                    </h3>
+                    <p>
+                      {{ .content | markdownify }}
+                    </p>
+                  </div>
+                {{ end }}
+              </div>
+            </div>
           </div>
         </div>
       </section>
     {{ end }}
   {{ end }}
-  <!-- /Features -->
+  <!-- /Salesforce Partner Section -->
 
   <!-- Testimonials -->
   {{ with site.GetPage "sections/testimonial" }}
     {{ if .Params.enable }}
-      <section class="section">
+      <section class="py-8">
         <div class="container">
           <div class="row">
             <div class="md:col-10 lg:col-8 xl:col-6 mx-auto mb-12 text-center">

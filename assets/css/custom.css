@@ -1,5 +1,48 @@
 /* Add your own custom styles here */
 
+/* Right-align navigation menu items */
+.navbar-nav {
+  justify-content: flex-end !important;
+  margin-left: auto !important;
+}
+
+/* Ensure navigation is above hero section */
+.header {
+  z-index: 100 !important;
+  position: relative !important;
+}
+
+.navbar {
+  z-index: 100 !important;
+}
+
+.nav-dropdown-list {
+  z-index: 101 !important;
+}
+
+/* Main navigation link hover state - green background */
+.nav-link:hover {
+  background-color: #006826 !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+}
+
+/* Dropdown parent menu hover state - green background */
+.nav-dropdown > span:hover {
+  background-color: #006826 !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+}
+
+/* Dropdown menu item hover state - green background */
+.nav-dropdown-link:hover {
+  background-color: #006826 !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
 /* Larger logo in header and footer */
 .navbar-brand img,
 .navbar-brand svg {
@@ -74,7 +117,7 @@ section picture:has(img[alt="feature image"]) {
 }
 
 /* First feature section - match width of three-column section and center-align */
-.section-sm:first-of-type {
+section.py-8:first-of-type {
   max-width: 100% !important;
   position: relative !important;
   background: linear-gradient(
@@ -89,7 +132,7 @@ section picture:has(img[alt="feature image"]) {
 }
 
 /* Add organic noise texture overlay */
-.section-sm:first-of-type::before {
+section.py-8:first-of-type::before {
   content: "" !important;
   position: absolute !important;
   top: 0 !important;
@@ -103,7 +146,7 @@ section picture:has(img[alt="feature image"]) {
 }
 
 /* Add radial gradient accent for depth */
-.section-sm:first-of-type::after {
+section.py-8:first-of-type::after {
   content: "" !important;
   position: absolute !important;
   top: -50% !important;
@@ -120,7 +163,7 @@ section picture:has(img[alt="feature image"]) {
   mix-blend-mode: soft-light !important;
 }
 
-.section-sm:first-of-type .container {
+section.py-8:first-of-type .container {
   max-width: 1200px !important;
   margin: 0 auto !important;
   padding-left: 1rem !important;
@@ -129,40 +172,40 @@ section picture:has(img[alt="feature image"]) {
   z-index: 2 !important;
 }
 
-.section-sm:first-of-type .row {
+section.py-8:first-of-type .row {
   justify-content: center !important;
   max-width: 1200px !important;
   margin: 0 auto !important;
 }
 
-.section-sm:first-of-type .col-12 {
+section.py-8:first-of-type .col-12 {
   max-width: 100% !important;
   width: 100% !important;
   text-align: center !important;
 }
 
 /* Center align headings and paragraphs in first feature section */
-.section-sm:first-of-type h2,
-.section-sm:first-of-type p,
-.section-sm:first-of-type ul {
+section.py-8:first-of-type h2,
+section.py-8:first-of-type p,
+section.py-8:first-of-type ul {
   text-align: center !important;
 }
 
 /* Center align bullet points in first feature section */
-.section-sm:first-of-type ul {
+section.py-8:first-of-type ul {
   list-style: none !important;
   padding: 0 !important;
   max-width: 100% !important;
   margin: 0 auto !important;
 }
 
-.section-sm:first-of-type ul li {
+section.py-8:first-of-type ul li {
   text-align: center !important;
   padding-left: 0 !important;
 }
 
 /* Hide the checkmark icon since it doesn't work well with center alignment */
-.section-sm:first-of-type ul li i {
+section.py-8:first-of-type ul li i {
   display: none !important;
 }
 
@@ -231,7 +274,7 @@ section picture:has(img[alt="feature image"]) {
 }
 
 /* Banner section background image - full width behind all content */
-.section.pt-14 {
+section.pt-14 {
   background-image: url("/images/banner-1.jpg") !important;
   background-size: cover !important;
   background-position: center !important;
@@ -246,7 +289,7 @@ section picture:has(img[alt="feature image"]) {
 }
 
 /* Center align the container content */
-.section.pt-14 .container {
+section.pt-14 .container {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -254,7 +297,7 @@ section picture:has(img[alt="feature image"]) {
 }
 
 /* Ensure background image shows behind grain texture */
-.section.pt-14::before {
+section.pt-14::before {
   content: "" !important;
   position: absolute !important;
   top: 0 !important;
@@ -269,11 +312,11 @@ section picture:has(img[alt="feature image"]) {
 }
 
 /* Ensure text is readable over the background image */
-.section.pt-14 .container,
-.section.pt-14 .row,
-.section.pt-14 h1,
-.section.pt-14 p,
-.section.pt-14 .btn {
+section.pt-14 .container,
+section.pt-14 .row,
+section.pt-14 h1,
+section.pt-14 p,
+section.pt-14 .btn {
   position: relative !important;
   z-index: 3 !important;
 }
